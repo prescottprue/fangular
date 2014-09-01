@@ -11,10 +11,10 @@ angular.module('ideaHat', ['ngAnimate', 'ngCookies',
 // DEVELOPMENT
 .constant('FBURL', 'https://ideaHat-dev.firebaseio.com')
 
-.run(['$rootScope', 'FBURL', 'loginService', function($rootScope, FBURL, loginService){
+.run(['$rootScope', 'FBURL', 'sessionService', function($rootScope, FBURL, sessionService){
 
   // establish authentication variable
-  $rootScope.auth = loginService.init('/login');
+  $rootScope.auth = sessionService.init('/login');
   
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
     DBG.log("[stateTransition]        fromState:{"+fromState.name+", "+fromState.controller+"} toState:{"+toState.name+", "+toState.controller+"}");
