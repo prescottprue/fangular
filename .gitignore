@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+development/
+release/
+src/.DS_Store
+src/js/.DS_Store
+*.DS_Store
+*/.DS_Store
+.lib/
+.template/
+.wiki/
+.idea/
+src/identity.json
+local_config.json
+forge-error.log
+.idea
